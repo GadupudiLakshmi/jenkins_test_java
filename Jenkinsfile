@@ -20,11 +20,13 @@ pipeline{
 			}
 		}
 	}
-	success {
-		echo 'successfully build'
-	}
-	failure {
-		echo 'Failed'
+	post {
+		success {
+			echo 'successfully build'
+		}
+		failure {
+			echo 'Failed'
+		}
 	}
 }
 		
