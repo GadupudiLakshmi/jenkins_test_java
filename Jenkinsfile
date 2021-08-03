@@ -30,7 +30,7 @@ pipeline{
 			echo 'successfully build'
 		}
 		failure {
-			mail to: 'gadupudilk@gmail.com' subject: 'java failed'
+			mail to: 'gadupudilk@gmail.com' subject 'java failed'
 			
 		}
 	}
