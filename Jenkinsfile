@@ -30,9 +30,8 @@ pipeline{
 			echo 'successfully build'
 		}
 		failure {
-			emailext body: 'A Test EMail', recipientProviders: [[$class: 'gadupudilk@gmail.com'], [$class: 'gadupudilk@gmail.com']], subject: 'Test'
+			emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvide'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
 		}
 	}
 }
 		
-
