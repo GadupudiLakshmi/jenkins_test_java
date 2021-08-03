@@ -30,8 +30,7 @@ pipeline{
 			echo 'successfully build'
 		}
 		failure {
-			mail to: 'gadupudilk@gmail.com' subject 'java failed'
-			
+			emailext body: 'A Test EMail', recipientProviders: [[$class: 'gadupudilk@gmail.com'], [$class: 'gadupudilk@gmail.com']], subject: 'Test'
 		}
 	}
 }
