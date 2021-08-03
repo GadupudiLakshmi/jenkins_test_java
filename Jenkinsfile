@@ -15,6 +15,11 @@ pipeline{
 			}
 		}
 		stage ('Deploy') {
+			when {
+				expression {
+					currentBuild.result == 'SUCCESS'
+				}
+			}
 			steps {
 				echo 'this is deploy'
 			}
