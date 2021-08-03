@@ -31,9 +31,8 @@ pipeline{
 		}
 		failure {
 			echo 'Failed'
-			mail {
-				to: gadupudilk@gmail.com, subject: 'java failed'
-			}
+			mail to: gadupudilk@gmail.com, subject: 'java failed'
+			
 		}
 	}
 }
